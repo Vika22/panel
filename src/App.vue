@@ -40,21 +40,15 @@
     </div>
     <div class="main">
       <div class="container">
-        <div class="row"></div>
+        <router-view></router-view>
       </div>
     </div>
-
-    <router-view></router-view>
-    <hello-world msg="Welcome to Your Vue.js App" />
   </div>
 </template>
 
 <script>
 export default {
   name: "App",
-  components: {
-    "hello-world": () => import("@/components/HelloWorld")
-  },
   data: () => {
     return {};
   }
@@ -66,8 +60,9 @@ header {
   background-color: #ffa573;
   height: 10vh;
   box-shadow: 0 0 50px rgb(255, 165, 115);
-  position: absolute;
+  position: fixed;
   width: 100%;
+  top: 0;
   z-index: 2;
 }
 .logo {
@@ -78,6 +73,7 @@ header {
   position: fixed;
   height: 100vh;
   width: 15vw;
+  min-width: 180px;
   background-color: #009e8e;
   z-index: 1;
   left: 0;
@@ -97,7 +93,7 @@ ul li .a {
   top: 0;
   left: 0;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   position: relative;
 }

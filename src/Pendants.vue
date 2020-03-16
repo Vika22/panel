@@ -1,18 +1,12 @@
 <template>
-  <div class="main">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3" v-for="pod in silver" :key="pod.id">
-          <article class="post">
-            <img v-bind:src="pod.photo" />
-            <h4>{{ pod.price }}</h4>
-            <p>{{ pod.description }}</p>
-            <router-link to="/buy">
-              <a href="services.html" class="btn btn-round">Купить</a>
-            </router-link>
-          </article>
-        </div>
-      </div>
+  <div class="row">
+    <div class="col-md-3" v-for="pod in silver" :key="pod.id">
+      <article class="post">
+        <img v-bind:src="pod.photo" />
+        <h4>{{ pod.price }}</h4>
+        <p>{{ pod.description }}</p>
+        <router-link class="btn btn-round" :to="{ name: 'buy', params: { menuitem: $route.name, item: pod.id, preview: pod } }">Купить</router-link>
+      </article>
     </div>
   </div>
 </template>
@@ -21,7 +15,6 @@
 <script>
 export default {
   name: "Pendants",
-  props: ["Pendants"],
   components: {},
   data: () => {
     return {

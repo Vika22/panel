@@ -10,10 +10,10 @@ import Buy from './Buy.vue'
 Vue.use(VueRouter);
 
 const routes = [
-  { path: '/pendants', component: Pendants },
-  { path: '/rings', component: Rings },
-  { path: '/earrings', component: Earrings },
-  { path: '/buy', component: Buy }
+  { path: '/pendants', name: 'pendants', component: Pendants },
+  { path: '/rings', name: 'rings', component: Rings },
+  { path: '/earrings', name: 'earrings', component: Earrings },
+  { path: '/:menuitem/buy/:item', name: 'buy', component: Buy }
 
 ];
 const router = new VueRouter({

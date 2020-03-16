@@ -1,13 +1,25 @@
 <template>
-  <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, autem excepturi blanditiis adipisci quo ducimus? Maxime nostrum incidunt officia, necessitatibus provident sequi quidem excepturi voluptatum, voluptatibus molestias repudiandae repellendus explicabo. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis recusandae minima facilis ipsam. Id optio, voluptas necessitatibus aut possimus nesciunt voluptates alias? Quos illo atque dolorem non, velit quae voluptates.</div>
+  <article class="buy-item">
+    <img :src="item.photo" alt="">
+    {{ item }}
+  </article>
 </template>
 <script>
 export default {
   name: "Buy",
-  props: ["items"],
   components: {},
   data: () => {
-    return {};
+    return {
+      item: ''
+    };
+  },
+  created () {
+    this.item = this.$route.params.preview
   }
 };
 </script>
+<style scoped>
+  .buy-item {
+    margin-top: 10vh;
+  }
+</style>

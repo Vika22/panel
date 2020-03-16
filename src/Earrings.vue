@@ -1,16 +1,12 @@
 <template>
-  <div class="main">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3" v-for="pod in silver" :key="pod.id">
-          <article class="post">
-            <img v-bind:src="pod.photo" />
-            <h4>{{ pod.price }}</h4>
-            <p>{{ pod.description }}</p>
-            <a href="services.html" class="btn btn-round">Купить</a>
-          </article>
-        </div>
-      </div>
+  <div class="row">
+    <div class="col-md-3" v-for="pod in silver" :key="pod.id">
+      <article class="post">
+        <img v-bind:src="pod.photo" />
+        <h4>{{ pod.price }}</h4>
+        <p>{{ pod.description }}</p>
+        <a href="services.html" class="btn btn-round">Купить</a>
+      </article>
     </div>
   </div>
 </template>
