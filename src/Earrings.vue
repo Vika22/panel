@@ -7,7 +7,7 @@
             <img v-bind:src="pod.photo" />
             <h4>{{ pod.price }}</h4>
             <p>{{ pod.description }}</p>
-            <a href="services.html" class="btn btn-round">Узнать больше</a>
+            <a href="services.html" class="btn btn-round">Купить</a>
           </article>
         </div>
       </div>

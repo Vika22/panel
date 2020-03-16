@@ -2,7 +2,16 @@
   <div>
     <header>
       <div class="container">
-        <img src="logo.png" class="logo" />
+        <div class="row">
+          <div class="col-md-6">
+            <img src="logo.png" class="logo" />
+          </div>
+          <div class="col-md-6">
+            <div>Корзина</div>
+            <input type="button" class="float-right" value="Аккаунт" />
+            <form action></form>
+          </div>
+        </div>
       </div>
     </header>
     <div class="sidenav">
@@ -18,13 +27,13 @@
           </router-link>
         </li>
         <li>
-          <router-link to="/rings" class="a">
-            <span title="Кольца">Кольца</span>
+          <router-link to="/earrings" class="a">
+            <span title="Серьги">Серьги</span>
           </router-link>
         </li>
         <li>
-          <router-link to="/earrings" class="a">
-            <span title="Серьги">Серьги</span>
+          <router-link to="/rings" class="a">
+            <span title="Кольца">Кольца</span>
           </router-link>
         </li>
       </ul>
@@ -88,7 +97,7 @@ ul li .a {
   top: 0;
   left: 0;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 2rem;
   text-transform: uppercase;
   position: relative;
 }
